@@ -33,6 +33,11 @@ with open("models/judul_model_nb.pkl", "rb") as f:
 with open("models/judul_model_tfid.pkl", "rb") as f:
     vectorizer = joblib.load(f)
     
+    
+@app.get("/")
+def home():
+    return {"message":"Test 123"}
+
 @app.get("/judul/{judul}", tags=["Items"], summary="Read Items", description="Ini adalah data berbagai macam item")
 async def read_item(judul: str = Query(None, min_length=2, max_length=12)):
     
