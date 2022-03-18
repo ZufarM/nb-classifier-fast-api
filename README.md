@@ -30,5 +30,5 @@ uvicorn main:app
 ```
 Starting server with hot reload:
 ```sh
-uvicorn main:app --reload untuk hot reload
+uvicorn main:app --reload
 ```
